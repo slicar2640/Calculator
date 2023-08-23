@@ -5,13 +5,13 @@ const equation = readline.createInterface({
   output: process.stdout,
 });
 
-equation.question("Expression to evaluate: ", evaluate);
+equation.question("Expression to evaluate: ", function(answer) {console.log(evaluate(answer))});
 
 function evaluate(s) {
   let tokens = tokenize(s)
   let parsed = parse(tokens)
   let result = evaluatePostfix(parsed)
-  console.log(result)
+  return result
 }
 
 function tokenize(s) {
