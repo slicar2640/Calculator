@@ -48,8 +48,7 @@ const precedence = {
   "/": 2,
   "%": 2,
   "+": 1,
-  "-": 1,
-  min: 0
+  "-": 1
 }
 
 function parse(tokens) {
